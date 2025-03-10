@@ -1,0 +1,528 @@
+{
+  "en": {
+    "planToggleButton": {
+      "indi": "Individual",
+      "pro": "Pro",
+      "business": "Business"
+    },
+    "title": {
+      "indi": "Master Exercise Anatomy and Training Expertise",
+      "pro": "Optimize Personal Training With Us!",
+      "business": "Enhance Excellence In Your Gym!"
+    },
+    "subtitle": {
+      "indi": "Assign workout plans to up to 2 clients",
+      "pro": "Assign workout plans to up to 25 clients",
+      "business": "Assign workout plans to up to 100 clients"
+    },
+    "bullets": {
+      "indi": {
+        "1": "Full access to all exercises & videos",
+        "2": "Access our advanced 3D model",
+        "3": "Create customized workout plans",
+        "4": "Download videos to watch offline"
+      },
+      "pro": {
+        "1": "Full access to all exercises & videos",
+        "2": "Access our advanced 3D model",
+        "3": "Create customized workout plans",
+        "4": "Download videos to watch offline"
+      },
+      "business": {
+        "1": "Full access to all exercises & videos",
+        "2": "Access our advanced 3D model",
+        "3": "Create customized workout plans",
+        "4": "Download videos to watch offline"
+      }
+    },
+    "iapButton": "Subscribe Now",
+    "iapButtonTextBelow": "auto-renewal, cancel anytime",
+    "activeSubscriptions": {
+      "indi": {
+        "1": "monthly",
+        "2": "yearly",
+        "default": "2"
+      },
+      "pro": {
+        "1": "monthly",
+        "2": "yearly",
+        "default": "2"
+      },
+      "business": {
+        "1": "monthly",
+        "2": "yearly",
+        "default": "2"
+      }
+    },
+    "subscriptions": {
+      "indi": {
+        "monthly": {
+          "title": "Monthly",
+          "billing": "Month",
+          "valueMonthBreakdownDividePriceBy": "DO NOT PRESENT",
+          "valueSavingsMultiplePriceBy": "DO NOT PRESENT",
+          "discount": "DO NOT PRESENT",
+          "iapIdIos": "com.musclemotion.strengthnative.fullaccess.monthly",
+          "iapIdAndroid": "com.mandm.strength.indi.monthly"
+        },
+        "yearly": {
+          "title": "Yearly",
+          "billing": "Year",
+          "valueMonthBreakdownDividePriceBy": "12",
+          "valueSavingsMultiplePriceBy": "2",
+          "discount": "50",
+          "iapIdIos": "com.musclemotion.strengthnative.fullaccess.test",
+          "iapIdAndroid": "com.mandm.strength.indi.yearly"
+        },
+        "3month": {
+          "title": "3 Month",
+          "billing": "3 Month",
+          "valueMonthBreakdownDividePriceBy": "3",
+          "valueSavingsMultiplePriceBy": "DO NOT PRESENT",
+          "discount": "DO NOT PRESENT",
+          "iapIdIos": "com.musclemotion.strengthnative.fullaccess.3month",
+          "iapIdAndroid": "com.mandm.strength.indi.3month"
+        }
+      },
+      "pro": {
+        "monthly": {
+          "title": "Monthly",
+          "billing": "Month",
+          "valueMonthBreakdownDividePriceBy": "DO NOT PRESENT",
+          "valueSavingsMultiplePriceBy": "DO NOT PRESENT",
+          "discount": "DO NOT PRESENT",
+          "iapIdIos": "com.musclemotion.strengthnative.pro.professional.montly2",
+          "iapIdAndroid": "com.mandm.strength.pro.monthly"
+        },
+        "yearly": {
+          "title": "Yearly",
+          "billing": "Year",
+          "valueMonthBreakdownDividePriceBy": "12",
+          "valueSavingsMultiplePriceBy": "12",
+          "discount": "50",
+          "iapIdIos": "com.musclemotion.strengthnative.pro.professional.yearly2",
+          "iapIdAndroid": "com.mandm.strength.pro.yearly"
+        }
+      },
+      "business": {
+        "monthly": {
+          "title": "Monthly",
+          "billing": "Month",
+          "valueMonthBreakdownDividePriceBy": "DO NOT PRESENT",
+          "valueSavingsMultiplePriceBy": "DO NOT PRESENT",
+          "discount": "DO NOT PRESENT",
+          "iapIdIos": "com.musclemotion.strengthnative.pro.business.montly2",
+          "iapIdAndroid": "com.mandm.strength.busi.monthly"
+        },
+        "yearly": {
+          "title": "Yearly",
+          "billing": "Year",
+          "valueMonthBreakdownDividePriceBy": "12",
+          "valueSavingsMultiplePriceBy": "2",
+          "discount": "50",
+          "iapIdIos": "com.musclemotion.strengthnative.pro.business.yearly2",
+          "iapIdAndroid": "com.mandm.strength.busi.yearly"
+        }
+      }
+    },
+              "secondaryText": "Regular Price",
+        "valueMonthBreakdownText": "Mo",
+    "valueSavingText": "Instead of",
+    "discountText": "Save"
+  },
+  "de": {
+    "planToggleButton": {
+      "indi": "Individual",
+      "pro": "Pro",
+      "business": "Business"
+    },
+    "title": {
+      "indi": "Master Exercise Anatomy and Training Expertise",
+      "pro": "Optimize Personal Training With Us!",
+      "business": "Enhance Excellence In Your Gym!"
+    },
+    "subtitle": {
+      "indi": "Assign workout plans to <y>up to 2 clients</y>",
+      "pro": "Assign workout plans to <y>up to 25 clients</y>",
+      "business": "Assign workout plans to <y>up to 100 clients</y>"
+    },
+    "bullets": {
+      "indi": {
+        "1": "Full access to all exercises & videos",
+        "2": "Access our advanced 3D model",
+        "3": "Create customized workout plans",
+        "4": "Download videos to watch offline"
+      },
+      "pro": {
+        "1": "Full access to all exercises & videos",
+        "2": "Access our advanced 3D model",
+        "3": "Create customized workout plans",
+        "4": "Download videos to watch offline"
+      },
+      "business": {
+        "1": "Full access to all exercises & videos",
+        "2": "Access our advanced 3D model",
+        "3": "Create customized workout plans",
+        "4": "Download videos to watch offline"
+      }
+    },
+    "iapButton": "Subscribe Now",
+    "iapButtonTextBelow": "auto-renewal, cancel anytime",
+    "subscriptions": {
+      "indi": {
+        "monthly": {
+          "title": "Monthly",
+          "billing": "Month"
+        },
+        "yearly": {
+          "title": "Yearly",
+          "billing": "Year"
+        },
+        "3month": {
+          "title": "3 Month",
+          "billing": "3 Month"
+        }
+      },
+      "pro": {
+        "monthly": {
+          "title": "Monthly",
+          "billing": "Month"
+        },
+        "yearly": {
+          "title": "Yearly",
+          "billing": "Year"
+        }
+      },
+      "business": {
+        "monthly": {
+          "title": "Monthly",
+          "billing": "Month"
+        },
+        "yearly": {
+          "title": "Yearly",
+          "billing": "Year"
+        }
+      }
+    },
+    "secondaryText": "Regular Price",
+            "valueMonthBreakdownText": "Mo",
+    "valueSavingText": "Instead of",
+    "discountText": "Save"
+  },
+  "es": {
+    "planToggleButton": {
+      "indi": "Individual",
+      "pro": "Pro",
+      "business": "Business"
+    },
+    "title": {
+      "indi": "Master Exercise Anatomy and Training Expertise",
+      "pro": "Optimize Personal Training With Us!",
+      "business": "Enhance Excellence In Your Gym!"
+    },
+    "subtitle": {
+      "indi": "Assign workout plans to <y>up to 2 clients</y>",
+      "pro": "Assign workout plans to <y>up to 25 clients</y>",
+      "business": "Assign workout plans to <y>up to 100 clients</y>"
+    },
+    "bullets": {
+      "indi": {
+        "1": "Full access to all exercises & videos",
+        "2": "Access our advanced 3D model",
+        "3": "Create customized workout plans",
+        "4": "Download videos to watch offline"
+      },
+      "pro": {
+        "1": "Full access to all exercises & videos",
+        "2": "Access our advanced 3D model",
+        "3": "Create customized workout plans",
+        "4": "Download videos to watch offline"
+      },
+      "business": {
+        "1": "Full access to all exercises & videos",
+        "2": "Access our advanced 3D model",
+        "3": "Create customized workout plans",
+        "4": "Download videos to watch offline"
+      }
+    },
+    "iapButton": "Subscribe Now",
+    "iapButtonTextBelow": "auto-renewal, cancel anytime",
+    "subscriptions": {
+      "indi": {
+        "monthly": {
+          "title": "Monthly",
+          "billing": "Month"
+        },
+        "yearly": {
+          "title": "Yearly",
+          "billing": "Year"
+        },
+        "3month": {
+          "title": "3 Month",
+          "billing": "3 Month"
+        }
+      },
+      "pro": {
+        "monthly": {
+          "title": "Monthly",
+          "billing": "Month"
+        },
+        "yearly": {
+          "title": "Yearly",
+          "billing": "Year"
+        }
+      },
+      "business": {
+        "monthly": {
+          "title": "Monthly",
+          "billing": "Month"
+        },
+        "yearly": {
+          "title": "Yearly",
+          "billing": "Year"
+        }
+      }
+    },
+    "secondaryText": "Regular Price",
+            "valueMonthBreakdownText": "Mo",
+    "valueSavingText": "Instead of",
+    "discountText": "Save"
+  },
+  "ru":{
+    "planToggleButton": {
+      "indi": "Individual",
+      "pro": "Pro",
+      "business": "Business"
+    },
+    "title": {
+      "indi": "Master Exercise Anatomy and Training Expertise",
+      "pro": "Optimize Personal Training With Us!",
+      "business": "Enhance Excellence In Your Gym!"
+    },
+    "subtitle": {
+      "indi": "Assign workout plans to <y>up to 2 clients</y>",
+      "pro": "Assign workout plans to <y>up to 25 clients</y>",
+      "business": "Assign workout plans to <y>up to 100 clients</y>"
+    },
+    "bullets": {
+      "indi": {
+        "1": "Full access to all exercises & videos",
+        "2": "Access our advanced 3D model",
+        "3": "Create customized workout plans",
+        "4": "Download videos to watch offline"
+      },
+      "pro": {
+        "1": "Full access to all exercises & videos",
+        "2": "Access our advanced 3D model",
+        "3": "Create customized workout plans",
+        "4": "Download videos to watch offline"
+      },
+      "business": {
+        "1": "Full access to all exercises & videos",
+        "2": "Access our advanced 3D model",
+        "3": "Create customized workout plans",
+        "4": "Download videos to watch offline"
+      }
+    },
+    "iapButton": "Subscribe Now",
+    "iapButtonTextBelow": "auto-renewal, cancel anytime",
+    "subscriptions": {
+      "indi": {
+        "monthly": {
+          "title": "Monthly",
+          "billing": "Month"
+        },
+        "yearly": {
+          "title": "Yearly",
+          "billing": "Year"
+        },
+        "3month": {
+          "title": "3 Month",
+          "billing": "3 Month"
+        }
+      },
+      "pro": {
+        "monthly": {
+          "title": "Monthly",
+          "billing": "Month"
+        },
+        "yearly": {
+          "title": "Yearly",
+          "billing": "Year"
+        }
+      },
+      "business": {
+        "monthly": {
+          "title": "Monthly",
+          "billing": "Month"
+        },
+        "yearly": {
+          "title": "Yearly",
+          "billing": "Year"
+        }
+      }
+    },
+    "secondaryText": "Regular Price",
+            "valueMonthBreakdownText": "Mo",
+    "valueSavingText": "Instead of",
+    "discountText": "Save"
+  },
+  "pt": {
+    "planToggleButton": {
+      "indi": "Individual",
+      "pro": "Pro",
+      "business": "Business"
+    },
+    "title": {
+      "indi": "Master Exercise Anatomy and Training Expertise",
+      "pro": "Optimize Personal Training With Us!",
+      "business": "Enhance Excellence In Your Gym!"
+    },
+    "subtitle": {
+      "indi": "Assign workout plans to <y>up to 2 clients</y>",
+      "pro": "Assign workout plans to <y>up to 25 clients</y>",
+      "business": "Assign workout plans to <y>up to 100 clients</y>"
+    },
+    "bullets": {
+      "indi": {
+        "1": "Full access to all exercises & videos",
+        "2": "Access our advanced 3D model",
+        "3": "Create customized workout plans",
+        "4": "Download videos to watch offline"
+      },
+      "pro": {
+        "1": "Full access to all exercises & videos",
+        "2": "Access our advanced 3D model",
+        "3": "Create customized workout plans",
+        "4": "Download videos to watch offline"
+      },
+      "business": {
+        "1": "Full access to all exercises & videos",
+        "2": "Access our advanced 3D model",
+        "3": "Create customized workout plans",
+        "4": "Download videos to watch offline"
+      }
+    },
+    "iapButton": "Subscribe Now",
+    "iapButtonTextBelow": "auto-renewal, cancel anytime",
+    "subscriptions": {
+      "indi": {
+        "monthly": {
+          "title": "Monthly",
+          "billing": "Month"
+        },
+        "yearly": {
+          "title": "Yearly",
+          "billing": "Year"
+        },
+        "3month": {
+          "title": "3 Month",
+          "billing": "3 Month"
+        }
+      },
+      "pro": {
+        "monthly": {
+          "title": "Monthly",
+          "billing": "Month"
+        },
+        "yearly": {
+          "title": "Yearly",
+          "billing": "Year"
+        }
+      },
+      "business": {
+        "monthly": {
+          "title": "Monthly",
+          "billing": "Month"
+        },
+        "yearly": {
+          "title": "Yearly",
+          "billing": "Year"
+        }
+      }
+    },
+    "secondaryText": "Regular Price",
+            "valueMonthBreakdownText": "Mo",
+    "valueSavingText": "Instead of",
+    "discountText": "Save"
+  },
+  "ko": {
+    "planToggleButton": {
+      "indi": "Individual",
+      "pro": "Pro",
+      "business": "Business"
+    },
+    "title": {
+      "indi": "Master Exercise Anatomy and Training Expertise",
+      "pro": "Optimize Personal Training With Us!",
+      "business": "Enhance Excellence In Your Gym!"
+    },
+    "subtitle": {
+      "indi": "Assign workout plans to <y>up to 2 clients</y>",
+      "pro": "Assign workout plans to <y>up to 25 clients</y>",
+      "business": "Assign workout plans to <y>up to 100 clients</y>"
+    },
+    "bullets": {
+      "indi": {
+        "1": "Full access to all exercises & videos",
+        "2": "Access our advanced 3D model",
+        "3": "Create customized workout plans",
+        "4": "Download videos to watch offline"
+      },
+      "pro": {
+        "1": "Full access to all exercises & videos",
+        "2": "Access our advanced 3D model",
+        "3": "Create customized workout plans",
+        "4": "Download videos to watch offline"
+      },
+      "business": {
+        "1": "Full access to all exercises & videos",
+        "2": "Access our advanced 3D model",
+        "3": "Create customized workout plans",
+        "4": "Download videos to watch offline"
+      }
+    },
+    "iapButton": "Subscribe Now",
+    "iapButtonTextBelow": "auto-renewal, cancel anytime",
+    "subscriptions": {
+      "indi": {
+        "monthly": {
+          "title": "Monthly",
+          "billing": "Month"
+        },
+        "yearly": {
+          "title": "Yearly",
+          "billing": "Year"
+        },
+        "3month": {
+          "title": "3 Month",
+          "billing": "3 Month"
+        }
+      },
+      "pro": {
+        "monthly": {
+          "title": "Monthly",
+          "billing": "Month"
+        },
+        "yearly": {
+          "title": "Yearly",
+          "billing": "Year"
+        }
+      },
+      "business": {
+        "monthly": {
+          "title": "Monthly",
+          "billing": "Month"
+        },
+        "yearly": {
+          "title": "Yearly",
+          "billing": "Year"
+        }
+      }
+    },
+    "secondaryText": "Regular Price",
+            "valueMonthBreakdownText": "Mo",
+    "valueSavingText": "Instead of",
+    "discountText": "Save"
+  }
+}

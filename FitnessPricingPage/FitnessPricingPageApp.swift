@@ -11,7 +11,7 @@ import SwiftUI
 struct FitnessPricingPageApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            PricingPageView()
         }
     }
 }
