@@ -65,6 +65,7 @@ struct SubscriptionsData: Codable {
 
 struct PlanSubscriptionOptions: Codable {
     let monthly, yearly: SubscriptionDetails
+    let threeMonth: SubscriptionDetails?
 }
 
 struct SubscriptionDetails: Codable {
