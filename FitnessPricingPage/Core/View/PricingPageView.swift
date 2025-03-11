@@ -216,50 +216,58 @@ struct PricingPageView: View {
             selectedSubscriptionType = type
         } label: {
             ZStack(alignment: .topTrailing) {
-                
-                VStack {
-                    // Main content
-                    HStack {
-                        VStack(alignment: .leading, spacing: 4) {
-                            Text(title)
-                                .font(.headline)
-                                .foregroundStyle(Color.theme.accent)
+                HStack(spacing: 0) {
+                    // Оранжевий індикатор (тільки якщо обрана ця кнопка)
+                    if selectedSubscriptionType == type {
+                        Rectangle()
+                            .fill(Color.theme.orange)
+                            .frame(width: 6)
+                            .padding(.leading, -1)
+                    }
+
+                    VStack(alignment: .leading, spacing: 8) {
+                        Text(title)
+                            .font(.headline)
+                            .foregroundColor(.white)
+                        
+                        HStack(alignment: .firstTextBaseline, spacing: 4) {
+                            Text(price)
+                                .font(.title2)
+                                .fontWeight(.bold)
+                                .foregroundColor(.white)
                             
-                            HStack(alignment: .firstTextBaseline, spacing: 4) {
-                                Text(price)
-                                    .font(.title3)
-                                    .fontWeight(.bold)
-                                    .foregroundStyle(Color.theme.accent)
-                                
-                                Text(billing)
+                            Text(billing)
+                                .font(.subheadline)
+                                .foregroundColor(.gray)
+                            
+                            if let monthBreakdown = monthBreakdown,
+                               let monthText = monthText {
+                                Text("(\(monthBreakdown) / \(monthText))")
                                     .font(.subheadline)
                                     .foregroundColor(.gray)
-                                
-                                if let monthBreakdown = monthBreakdown,
-                                   let monthText = monthText {
-                                    Text("(\(monthBreakdown)/\(monthText))")
-                                        .font(.subheadline)
-                                        .foregroundColor(.gray)
-                                    
-                                Spacer()
-                                    // Savings text at bottom
-                                if let savings = savings,
-                                    let savingsText = savingsText {
-                                    HStack() {
-                                        Text("\(savingsText) $\(savings)")
-                                            .font(.caption)
-                                            .foregroundColor(.gray)
-                                        }
-                                   
-                                    }
-                                }
+                            }
+                            Spacer()
+                            if let savings = savings,
+                               let savingsText = savingsText {
+                                Text("\(savingsText) \(savings)")
+                                    .font(.caption)
+                                    .foregroundColor(.gray)
+                                    .strikethrough()
                             }
                         }
                         
-                        Spacer()
+                       
                     }
+                    .padding()
+                    .frame(maxWidth: .infinity, alignment: .leading)
+                    .background(Color.black.opacity(0.85))
+                    .cornerRadius(8)
+                    .shadow(color: .black.opacity(0.3), radius: 4, x: 0, y: 2)
                 }
-                .padding()
+                .overlay(
+                    RoundedRectangle(cornerRadius: 8)
+                        .stroke(Color.gray.opacity(0.3), lineWidth: 1)
+                )
                 
                 // Discount label in top right
                 if let discount = discount {
@@ -274,13 +282,10 @@ struct PricingPageView: View {
                         .padding(8)
                 }
             }
-            .background(
-                RoundedRectangle(cornerRadius: 8)
-                    .stroke(selectedSubscriptionType == type ? Color.theme.orange : Color.gray.opacity(0.3))
-            )
         }
         .buttonStyle(PlainButtonStyle())
     }
+
 
 
         private var subscribeButton: some View {
