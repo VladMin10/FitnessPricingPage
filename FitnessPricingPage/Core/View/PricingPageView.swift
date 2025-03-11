@@ -15,7 +15,9 @@ struct PricingPageView: View {
     @State private var localizationData: LocalizationData?
     @State private var selectedPlan: String = "indi"
     @State private var selectedLanguage: LanguageData?
-    @State private var selectedSubscriptionType: String = "3month"
+    @State private var selectedSubscriptionType: String = "monthly"
+    @State private var expandedFAQ: UUID? = nil
+    @State private var showingRestoreInfo = false
     
     var body: some View {
         ZStack {
@@ -25,19 +27,30 @@ struct PricingPageView: View {
                     headerView
                     subtitleView
                     planButton
+                        .padding(.horizontal)
                     subscriptionOptionsView
                         .padding(.top)
+                        .padding(.horizontal)
                     subscribeButton
                         .padding(.vertical)
                     secondTitleView
+                        .padding(.top)
                     UniversityCarouselView()
                         .padding(.trailing)
+                        .padding(.bottom)
                     secondSubtitleView
                         .padding(.top)
                     bulletsView
                         .padding(.top)
+                    thirdSection
+                        .padding(.top, 40)
+                    FeedbackCarouselView()
+                    faqSection
+                       // .padding(.top, 40)
+                    supportSection
+                        .padding(.top, 40)
+                        .padding(.bottom, 20)
                 }
-                .padding(.horizontal)
             }
         }
         .onAppear {
@@ -66,6 +79,7 @@ struct PricingPageView: View {
                 .padding(.bottom)
                 .frame(maxWidth : .infinity, alignment: .leading)
                 .padding(.leading, 5)
+                .padding(.horizontal)
             }
         }
     }
@@ -76,6 +90,7 @@ struct PricingPageView: View {
             .font(.system(size: 20, weight: .light))
             .frame(maxWidth : .infinity, alignment: .leading)
             .padding(.leading, 5)
+            .padding(.horizontal)
     }
     
     
@@ -251,7 +266,7 @@ struct PricingPageView: View {
                     Text(discount)
                         .font(.caption)
                         .fontWeight(.bold)
-                        .foregroundColor(.white)
+                        .foregroundColor(.black)
                         .padding(.horizontal, 8)
                         .padding(.vertical, 4)
                         .background(Color.theme.orange)
@@ -342,7 +357,164 @@ struct PricingPageView: View {
                 }
             }
         }
+        .padding(.horizontal)
     }
+
+
+    private var thirdSection: some View {
+        VStack(spacing: 24) {
+            Text("Trusted by millions\nof users worldwide")
+                .font(.system(size: 32, weight: .bold))
+                .multilineTextAlignment(.center)
+                .foregroundColor(Color.theme.accent)
+            
+            VStack(spacing: 20) {
+                statView(value: "8M+", description: "Social media followers")
+                HStack {
+                    Spacer()
+                    Rectangle()
+                        .frame(width: 240, height: 1)
+                        .foregroundColor(Color.gray.opacity(0.3))
+                    Spacer()
+                }
+                statView(value: "129", description: "Countries around the world")
+                HStack {
+                    Spacer()
+                    Rectangle()
+                        .frame(width: 240, height: 1)
+                        .foregroundColor(Color.gray.opacity(0.3))
+                    Spacer()
+                }
+                statView(value: "100K+", description: "App stores reviews")
+                HStack {
+                    Spacer()
+                    Rectangle()
+                        .frame(width: 240, height: 1)
+                        .foregroundColor(Color.gray.opacity(0.3))
+                    Spacer()
+                }
+                statView(value: "1200+", description: "Exercises 3D animations")
+            }
+            .padding(.horizontal)
+        }
+        .padding(.vertical, 40)
+        .frame(maxWidth: .infinity)
+        .background(Color.theme.purple)
+    }
+
+    private func statView(value: String, description: String) -> some View {
+        VStack(spacing: 4) {
+            Text(value)
+                .font(.system(size: 24, weight: .bold))
+                .foregroundColor(Color.theme.orange)
+            Text(description)
+                .font(.system(size: 16))
+                .foregroundColor(Color.theme.accent)
+        }
+    }
+
+    private var faqSection: some View {
+            VStack(spacing: 24) {
+                Text("Frequently asked \nquestions")
+                    .font(.system(size: 32, weight: .bold))
+                    .multilineTextAlignment(.center)
+                    .foregroundColor(Color.theme.accent)
+                
+                VStack(spacing: 22) {
+                    ForEach(faqs) { faq in
+                        Button {
+                            withAnimation {
+                                expandedFAQ = expandedFAQ == faq.id ? nil : faq.id
+                            }
+                        } label: {
+                            HStack {
+                                Text(faq.question)
+                                    .font(.system(size: 18))
+                                    .foregroundColor(Color.theme.accent)
+                                    .fontWeight(.medium)
+                                    .multilineTextAlignment(.leading)
+                                Spacer()
+                                Image(systemName: "chevron.right")
+                                    .foregroundColor(Color.theme.accent)
+                                    .rotationEffect(.degrees(expandedFAQ == faq.id ? 90 : 0))
+                            }
+                            .padding(20)
+                            .background(Color.theme.switchBackround)
+                            .cornerRadius(6)
+                        }
+                        
+                        if expandedFAQ == faq.id {
+                            Text(faq.answer)
+                                .font(.system(size: 14))
+                                .foregroundColor(Color.theme.accent.opacity(0.8))
+                                .padding(.horizontal)
+                                .transition(.opacity)
+                        }
+                    }
+                }
+                .padding(.horizontal)
+            }
+        }
+        
+        private var supportSection: some View {
+            VStack(spacing: 16) {
+                Text("Still have questions? Get in touch with \nour ")
+                    .font(.system(size: 18))
+                    .foregroundColor(Color.theme.accent) +
+                Text("sales team.")
+                    .font(.system(size: 18, weight: .bold))
+                    .foregroundColor(Color.theme.accent)
+                    .underline()
+                
+                VStack(spacing: 8) {
+                            Text("Restore Apple Subscription")
+                                .font(.system(size: 16))
+                                .foregroundColor(Color.theme.orange)
+                                .underline()
+                                .onTapGesture {
+                                    showingRestoreInfo.toggle()
+                                }
+                            
+                            if showingRestoreInfo {
+                                Text("To restore your subscription, please ensure you are logged in to the App Store with the Apple ID used for the original purchase. Then use the \"Restore Subscription\" option on any iOS device.")
+                                    .font(.system(size: 14))
+                                    .foregroundColor(Color.theme.accent)
+                                    .padding(16)
+                                    .background(Color.theme.switchBackround)
+                                    .overlay(
+                                        RoundedRectangle(cornerRadius: 12)
+                                            .stroke(Color.theme.orange, lineWidth: 1)
+                                        )
+                                    .cornerRadius(6)
+                                    .padding(.horizontal)
+                            }
+                        }
+
+            }
+            .multilineTextAlignment(.center)
+        }
+        
+        private var restoreInfoOverlay: some View {
+            ZStack {
+                Color.black.opacity(0.3)
+                    .edgesIgnoringSafeArea(.all)
+                    .onTapGesture {
+                        showingRestoreInfo = false
+                    }
+                
+                VStack {
+                    Text("To restore your subscription, please ensure you are logged in to the App Store with the Apple ID used for the original purchase. Then use the \"Restore Subscription\" option on any iOS device.")
+                        .font(.system(size: 14))
+                        .foregroundColor(Color.theme.accent)
+                        .padding(16)
+                        .background(Color.theme.switchBackround)
+                        .cornerRadius(6)
+                        
+                        .padding(.horizontal, 32)
+                }
+            }
+        }
+
 
 }
 
